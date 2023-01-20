@@ -44,7 +44,7 @@ public class GroceryMain {
 
     /**
      * For the purpose of this short exercise, this method will destroy and set up a new grocery table.
-     * This is not a normal way to set up your tables, in your actual projects you should set up your database
+     * This is not a normal way to set up your tables, in real-world projects you would likely set up your database
      * schema in a SQL editor such as DBeaver or DataGrip.
      */
     public static void databaseSetup(){

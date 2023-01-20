@@ -28,7 +28,8 @@ public class GroceryRepositoryTest {
 
         List<String> allGroceries = groceryDAO.getAllGroceries();
 
-        Assert.assertEquals(expectedOutput, allGroceries);
+        Assert.assertEquals("getAllGroceries should have a valid SQL statement that gets all groceries.",
+                expectedOutput, allGroceries);
         
     }
     /**
@@ -36,6 +37,9 @@ public class GroceryRepositoryTest {
      */
     @Test
     public void groceryListAddTest1(){
+//        test that the select all works before trying to insert
+        groceryListEmptyOnStartTest();
+
         List<String> expectedOutput = new ArrayList<>();
         expectedOutput.add("apples");
         
@@ -43,7 +47,8 @@ public class GroceryRepositoryTest {
 
         List<String> actualOutput = groceryDAO.getAllGroceries();
 
-        Assert.assertEquals(expectedOutput, actualOutput);
+        Assert.assertEquals("addGrocery should have a valid SQL statement that adds a grocery.",
+                expectedOutput, actualOutput);
 
     }
 }
