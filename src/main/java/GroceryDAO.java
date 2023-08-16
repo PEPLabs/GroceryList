@@ -48,7 +48,7 @@ public class GroceryDAO {
      * You should use the preparedStatement syntax for filling in unknown parameters with a '?'.
      * For instance, an insert statement would be written as:
      * String sql = "INSERT INTO TABLE (Column1, Column2) VALUES (?, ?)"
-     * The question marks can be filled in by the methods setString, setInt, etc of the PreparedStatement. they follow
+     * The question marks can be filled in by the methods setString, setInt, etc of the PreparedStatement. They follow
      * this format, where the first argument identifies the question mark to be filled (left to right, starting
      * from one) and the second argument identifies the variable to be used:
      * preparedStatement.setString(1,int1);
