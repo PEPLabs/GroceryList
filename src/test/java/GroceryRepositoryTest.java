@@ -51,4 +51,24 @@ public class GroceryRepositoryTest {
                 expectedOutput, actualOutput);
 
     }
+
+        /**
+     * When a grocery is added, the grocery database should contain the grocery.
+     */
+    @Test
+    public void groceryListAddTest2(){
+//        test that the select all works before trying to insert
+        groceryListEmptyOnStartTest();
+
+        List<String> expectedOutput = new ArrayList<>();
+        expectedOutput.add("bananas");
+        
+        groceryDAO.addGrocery("bananas");
+
+        List<String> actualOutput = groceryDAO.getAllGroceries();
+
+        Assert.assertEquals("addGrocery should have a valid SQL statement that adds a grocery.",
+                expectedOutput, actualOutput);
+
+    }
 }
